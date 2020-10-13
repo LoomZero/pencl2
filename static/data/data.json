@@ -1,0 +1,193 @@
+{
+  "Image": {
+    "images": [
+      {
+        "src": "https://photojournal.jpl.nasa.gov/jpeg/PIA23689.jpg"
+      }
+    ]
+  },
+  "Images": {
+    "defaults": {
+      "time": 5000,
+      "loop": true,
+      "shuffle": true
+    },
+    "images": [
+      {
+        "src": "https://photojournal.jpl.nasa.gov/jpeg/PIA23689.jpg",
+        "time": 10000
+      },
+      {
+        "src": "https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg"
+      },
+      {
+        "src": "https://media.osram.info/media/img/osram-dam-15418849/c,x,960,y,640,w,3400,h,1850/s,x,1920,y,0/GettyImages-998946914.jpg"
+      }
+    ]
+  },
+  "Music": {
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=pIF_9E--GZA",
+        "start": 100, 
+        "end": 200
+      }
+    ]
+  },
+  "Musics No": {
+    "defaults": {
+      "volume": 10
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 100, 
+        "end": 102
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 120, 
+        "end": 123,
+        "volume": 50
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 140, 
+        "end": 142
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 15, 
+        "end": 17
+      }
+    ]
+  },
+  "Musics Shuffle": {
+    "defaults": {
+      "shuffle": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 100, 
+        "end": 102
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 120, 
+        "end": 123,
+        "volume": 50
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 140, 
+        "end": 142
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 15, 
+        "end": 17
+      }
+    ]
+  },
+  "Musics Loop Shuffle": {
+    "defaults": {
+      "loop": true,
+      "shuffle": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 100, 
+        "end": 102
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 120, 
+        "end": 123,
+        "volume": 50
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 140, 
+        "end": 142
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 15, 
+        "end": 17
+      }
+    ]
+  },
+  "Musics Loop": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 100, 
+        "end": 102
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 120, 
+        "end": 123,
+        "volume": 50
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 140, 
+        "end": 142
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
+        "start": 15, 
+        "end": 17
+      }
+    ]
+  },
+  "Sound": {
+    "sounds": [
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 100, 
+        "end": 103
+      }
+    ]
+  },
+  "Sounds": {
+    "sounds": [
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 100, 
+        "end": 103
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
+        "start": 10, 
+        "end": 12
+      }
+    ]
+  },
+  "Video": {
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=kNiOnMMxak0"
+      }
+    ]
+  },
+  "Video + Music": {
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=dDVCqx28Kss"
+      }
+    ],
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=kNiOnMMxak0",
+        "volume": 0
+      }
+    ]
+  }
+}
