@@ -17,6 +17,14 @@ class AdminClient {
     return this.request('screen', { route, params });
   }
 
+  async getState() {
+    const response = await this.screen('getState');
+    
+    if (this._element.checkResponse(response)) {
+      this._element.setState(response.data);
+    }
+  }
+
   mount(element) {
     this._element = element;
   }

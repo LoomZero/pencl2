@@ -2,6 +2,7 @@ import Sound from './Sound';
 import Music from './Music';
 import Video from './Video';
 import Image from './Image';
+import Client from './index';
 
 class Manager {
 
@@ -20,13 +21,18 @@ class Manager {
     this._element = element;
     this._players = {};
     this._image = null;
+    Client.update(this.getState());
   }
 
   execute(data) {
-    this.sound(data);
-    this.music(data);
-    this.video(data);
-    this.image(data);
+    Promise.all([
+      this.sound(data),
+      this.music(data),
+      this.video(data),
+      this.image(data),
+    ]).then(() => {
+      this.update();
+    });
   }
 
   /**
@@ -57,27 +63,42 @@ class Manager {
 
   sound(data) {
     if (!data.sounds) return;
-    this.play('sound', new Sound(this, data));
+    return this.play('sound', new Sound(this, data));
   }
 
   music(data) {
     if (!data.musics) return;
-    this.play('music', new Music(this, data));
+    return this.play('music', new Music(this, data));
   }
 
   video(data) {
     if (!data.videos) return;
-    this.clear(this._image).then(() => {
+    return this.clear(this._players['image']).then(() => {
       this.play('video', new Video(this, data));
     });
   }
 
   image(data) {
     if (!data.images) return;
-    this.clear(this._players['video']).then(() => {
-      this._image = new Image(this, data);
-      this._image.play();
+    return this.clear(this._players['video']).then(() => {
+      this.play('image', new Image(this, data));
     });
+  }
+
+  update() {
+    Client.update(this.getState());
+  }
+
+  getState() {
+    const state = {};
+
+    for (const type in this._players) {
+      if (this._players[type]) {
+        state[this._players[type].id] = state[this._players[type].id] || [];
+        state[this._players[type].id].push(this._players[type].wrapper);
+      }
+    }
+    return state;
   }
 
 };

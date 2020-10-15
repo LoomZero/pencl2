@@ -17,6 +17,10 @@ class ScreenClient {
     return this.request('admin', { route, params });
   }
 
+  update(state) {
+    return this.admin('updateState', { state });
+  }
+
 }
 
 export default new ScreenClient();

@@ -1,5 +1,6 @@
 import Media from './Media';
 import YT from 'yt-player';
+import Client from './index';
 
 export default class YTMedia extends Media {
 
@@ -58,11 +59,11 @@ export default class YTMedia extends Media {
   /**
    * @abstract
    */
-  onReady() { };
+  onReady() { }
 
   /**
    * @abstract
    */
-  onPlay() { };
+  onPlay() { }
 
 }

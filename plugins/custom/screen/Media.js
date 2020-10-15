@@ -73,7 +73,9 @@ export default class Media {
    * @abstract
    */
   onFinish() { 
-    this.stop();
+    this.stop().then(() => {
+      this.manager.onFinish();
+    });
   }
 
 }

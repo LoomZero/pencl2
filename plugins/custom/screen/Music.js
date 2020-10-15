@@ -56,8 +56,4 @@ export default class Music extends YTMedia {
     this.next();
   }
 
-  onFinish() {
-    this.stop();
-  }
-
 }

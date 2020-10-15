@@ -31,11 +31,13 @@ export default class ScreenController extends Controller {
       for (const index in data) {
         data[index].id = ScreenController.getID(index);
         data[index].name = index;
+        data[index].states = [];
 
-        if (data[index].defaults) {
-          for (const key in data[index].defaults) {
-            for (const option of ['musics', 'images', 'sounds', 'videos']) {
-              if (!data[index][option]) continue;
+        for (const option of ['musics', 'images', 'sounds', 'videos']) {
+          if (!data[index][option]) continue;
+          data[index].states.push(option);
+          if (data[index].defaults) {
+            for (const key in data[index].defaults) {
               for (const item in data[index][option]) {
                 if (data[index][option][item][key] === undefined) {
                   data[index][option][item][key] = data[index].defaults[key];
