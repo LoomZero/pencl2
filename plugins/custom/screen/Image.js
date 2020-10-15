@@ -1,15 +1,21 @@
-import YTMedia from './YTMedia';
+import Media from './Media';
 
-export default class Music extends YTMedia {
+export default class Image extends Media {
 
   get wrapper() {
-    return 'musics';
+    return 'images';
   }
 
   play() {
     this._register = Array.from(Array(this.items.length).keys());
     this._index = -1;
     this.next();
+  }
+
+  load(item) {
+    this.manager.element.setImage(item.src).then(() => {
+      this.manager.element.setBlend(false);
+    });
   }
 
   getNextItem() {
@@ -57,7 +63,13 @@ export default class Music extends YTMedia {
   }
 
   onFinish() {
-    this.stop();
+    console.log('finish');
+  }
+
+  stop() {
+    this.manager.element.setBlend(true);
+    this.manager.element.removeImage();
+    return this;
   }
 
 }

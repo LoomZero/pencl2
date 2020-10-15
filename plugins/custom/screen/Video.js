@@ -1,19 +1,19 @@
-import Media from './Media';
+import Music from './Music';
 
-export default class Video extends Media {
+export default class Video extends Music {
 
   get wrapper() {
     return 'videos';
   }
 
-  play() {
-    const index = this.random(0, this.items.length - 1);
-    this.load(this.items[index]);
+  stop() {
+    return this.manager.element.setBlend(true).then(() => {
+      return super.stop();
+    });
   }
 
-  onEnded() {
-    super.onEnded();
-    this.onFinish();
+  onPlay() {
+    this.manager.element.setBlend(false);
   }
 
 }

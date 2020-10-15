@@ -6,13 +6,6 @@ export default class Media {
     this._manager = manager;
     this._data = data;
     this._target = null;
-    this._options = {
-      wmode: 'transparent',
-      host: 'https://www.youtube-nocookie.com',
-      modestBranding: false,
-    };
-
-    this.player = null;
   }
 
   setTarget(target) {
@@ -34,12 +27,12 @@ export default class Media {
     return this.data[this.wrapper];
   }
 
-  get volume() {
-    return 100;
+  get id() {
+    return this.data.id;
   }
 
-  stop() {
-    this.player.destroy();
+  async stop() {
+    return this;
   }
 
   random(min, max) {
@@ -58,51 +51,29 @@ export default class Media {
     return this.defaults().shuffle || false;
   }
 
-  load(item) {
-    const options = {
-      videoId: (new URL(item.src)).searchParams.get('v'),
-    };
-
-    if (item.start) {
-      options.startSeconds = item.start;
-    }
-    if (item.end) {
-      options.endSeconds = item.end;
-    }
-
-    this.player = new YT(this._target, this._options);
-    this.player.load(options, true);
-    this.player.on('ended', this.onEnded.bind(this));
-
-    if (item.volume === undefined) {
-      this.player.setVolume(this.volume);
-    } else {
-      this.player.setVolume(item.volume);
-    }
-  }
-
   /**
    * @abstract
    * @returns {string}
    */
-  get wrapper() {}
+  get wrapper() { }
 
   /**
    * @abstract
    */
-  play() {}
+  play() { }
 
   /**
    * @abstract
    */
   onEnded() {
-    this.stop();
-    this.player = null;
+    this.onFinish();
   }
 
   /**
    * @abstract
    */
-  onFinish() {}
+  onFinish() { 
+    this.stop();
+  }
 
 }

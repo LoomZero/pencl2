@@ -66,6 +66,8 @@ export default {
   &--wrapper
     display: flex
     flex-wrap: wrap
+    overflow-y: auto
+    height: 100%
 
   &--item
     width: 100%
