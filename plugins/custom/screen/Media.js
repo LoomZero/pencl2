@@ -59,6 +59,12 @@ export default class Media {
 
   /**
    * @abstract
+   * @returns {string}
+   */
+  get type() { }
+
+  /**
+   * @abstract
    */
   play() { }
 
@@ -73,9 +79,7 @@ export default class Media {
    * @abstract
    */
   onFinish() { 
-    this.stop().then(() => {
-      this.manager.onFinish();
-    });
+    this.manager.onFinish(this.type);
   }
 
 }

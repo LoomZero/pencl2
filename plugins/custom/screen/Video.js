@@ -6,6 +6,10 @@ export default class Video extends Music {
     return 'videos';
   }
 
+  get type() {
+    return 'video';
+  }
+
   stop() {
     return this.manager.element.setBlend(true).then(() => {
       return super.stop();

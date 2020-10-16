@@ -6,6 +6,10 @@ export default class Music extends YTMedia {
     return 'musics';
   }
 
+  get type() {
+    return 'music';
+  }
+
   play() {
     this._register = Array.from(Array(this.items.length).keys());
     this._index = -1;
@@ -45,6 +49,7 @@ export default class Music extends YTMedia {
     } else {
       item = this.getNextItem();
     }
+
     if (item === null) {
       this.onFinish();
     } else {

@@ -6,6 +6,10 @@ export default class Image extends Media {
     return 'images';
   }
 
+  get type() {
+    return 'image';
+  }
+
   play() {
     this._register = Array.from(Array(this.items.length).keys());
     this._index = -1;

@@ -43,6 +43,7 @@ export default class YTMedia extends Media {
       options.endSeconds = item.end;
     }
 
+    if (this.player) this.player.destroy();
     this.player = new YT(this._target, this._options);
     this.player.load(options, this.auotplay);
     this.player.on('unstarted', this.onReady.bind(this));

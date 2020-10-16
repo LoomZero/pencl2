@@ -8,16 +8,22 @@
       .game-screen--images
         .game-screen--image.game-screen--showable(v-for="image in images", :key="image.src", :class="{'game-screen--show': image.show}", :style="{'background-image': 'url(' + image.src + ')'}", @transitionend="removeImage()")
       .game-screen--blend.game-screen--showable(:class="{'game-screen--show': blend}", @transitionend="onFinish('blend')")
+    .game-screen--message
+      Message.game-screen--message-size(ref="message")
 </template>
 
 <script>
 import Client from '~/plugins/custom/screen';
 import Manager from '~/plugins/custom/screen/Manager';
 import AsyncHander from '~/plugins/core/event/AsyncHandler';
+import Message from '~/components/core/state/Message';
 
 const handler = new AsyncHander();
 
 export default {
+  components: {
+    Message
+  },
   data() {
     return {
       blend: true,
@@ -110,5 +116,15 @@ export default {
 
   &--show
     opacity: 1
+
+  &--message
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &--message-size
+    min-width: 30vw
+    min-height: 30vh
 
 </style>

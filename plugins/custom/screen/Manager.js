@@ -8,6 +8,12 @@ class Manager {
 
   constructor() {
     this._element = null;
+    this._interval = setInterval(async () => {
+      const response = await this.update();
+      if (!response.isOK() && this._element) {
+        this._element.$refs.message.setResponse(response);
+      }
+    }, 1000);
   }
 
   /**
@@ -21,7 +27,7 @@ class Manager {
     this._element = element;
     this._players = {};
     this._image = null;
-    Client.update(this.getState());
+    this.update();
   }
 
   execute(data) {
@@ -61,6 +67,13 @@ class Manager {
     }
   }
 
+  onFinish(type) {
+    return this.clear(this._players[type]).then(() => {
+      this._players[type] = null;
+      this.update();
+    });
+  }
+
   sound(data) {
     if (!data.sounds) return;
     return this.play('sound', new Sound(this, data));
@@ -73,20 +86,20 @@ class Manager {
 
   video(data) {
     if (!data.videos) return;
-    return this.clear(this._players['image']).then(() => {
-      this.play('video', new Video(this, data));
+    return this.onFinish('image').then(() => {
+      return this.play('video', new Video(this, data));
     });
   }
 
   image(data) {
     if (!data.images) return;
-    return this.clear(this._players['video']).then(() => {
-      this.play('image', new Image(this, data));
+    return this.onFinish('video').then(() => {
+      return this.play('image', new Image(this, data));
     });
   }
 
   update() {
-    Client.update(this.getState());
+    return Client.update(this.getState());
   }
 
   getState() {
