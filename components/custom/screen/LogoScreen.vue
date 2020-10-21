@@ -1,14 +1,12 @@
 <template lang="pug">
-  .logo-screen(:class="classes", @click="click")
+  .logo-screen(:class="classes")
     SVGEmbed(src="/effects/wavy.svg", style="display: none;")
     .logo-screen--layer.logo-screen--layer-witcher
       .logo-screen--center
         .logo-screen--witcher-bg
-          img(src="/images/logos/witcher_serie.svg")
+          img.logo-screen--witcher-image(src="/images/logos/witcher_serie.svg")
         .logo-screen--witcher-effect
           img.logo-screen--witcher(src="/images/logos/witcher_logo_3.svg")
-        //-.logo-screen--witcher-text
-          | WITCHER
     .logo-screen--layer.logo-screen--layer-logo
       .logo-screen--center
         .logo-screen--logo-effect
@@ -32,6 +30,11 @@ const Intro = new Howl({
   src: "/music/intro_lang.mp3",
   onload: () => {
     play();
+  },
+  onend: () => {
+    item.$router.push({
+      path: '/screen',
+    });
   },
 });
 
@@ -66,9 +69,9 @@ export default {
     }
   },
   methods: {
-    click() {
+    start() {
       play();
-    }
+    },
   },
   mounted() {
     item = this;
@@ -116,7 +119,7 @@ export default {
     left: 50%
     transform: translate(-50%, -50%)
   
-  &--witcher-bg img
+  &--witcher-image
     width: auto
     height: 100vh
     opacity: 0
@@ -124,7 +127,7 @@ export default {
     transform: scale(1.1)
     transition: filter 2s 10s, opacity .8s 10s, transform 2s 10s
 
-  &---animate &--witcher-bg img
+  &---animate &--witcher-image
     filter: blur(2px) url('#wavy') drop-shadow(0 0 50px rgba(255, 255, 255, .2))
     transform: scale(1)
     opacity: .4

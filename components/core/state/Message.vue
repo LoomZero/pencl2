@@ -40,7 +40,7 @@ export default {
         this.setMessage(response.data.error, 'error');
       }
     },
-    setMessage(text, state = 'info', time = 5000) {
+    setMessage(text, state = 'info', time = 2000) {
       this.text = text;
       this.state = state;
       if (time) this.open(time);
@@ -53,7 +53,7 @@ export default {
         }, time);
       }
     },
-    open(time = 5000) {
+    open(time = 2000) {
       if (time) this.setTimeout(time);
       if (this.isOpen) return Promise.resolve();
       open = new AsyncPromise();

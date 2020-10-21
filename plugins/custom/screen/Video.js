@@ -17,6 +17,7 @@ export default class Video extends Music {
   }
 
   onPlay() {
+    super.onPlay();
     this.manager.element.setBlend(false);
   }
 

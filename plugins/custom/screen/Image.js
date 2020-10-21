@@ -17,9 +17,14 @@ export default class Image extends Media {
   }
 
   load(item) {
+    this.manager.element.openLoading(this.wrapper);
     this.manager.element.setImage(item.src).then(() => {
       this.manager.element.setBlend(false);
+      this.manager.element.clearLoading();
     });
+    this.timeout = setTimeout(() => {
+      this.next();
+    }, item.time || 5000);
   }
 
   getNextItem() {
@@ -73,6 +78,7 @@ export default class Image extends Media {
   stop() {
     this.manager.element.setBlend(true);
     this.manager.element.removeImage();
+    clearTimeout(this.timeout);
     return this;
   }
 

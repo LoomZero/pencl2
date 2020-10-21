@@ -177,6 +177,13 @@
       }
     ]
   },
+  "Long Music": {
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=kNiOnMMxak0"
+      }
+    ]
+  },
   "Video + Music": {
     "musics": [
       {

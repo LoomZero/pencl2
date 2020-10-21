@@ -10,8 +10,8 @@ class Manager {
     this._element = null;
     this._interval = setInterval(async () => {
       const response = await this.update();
-      if (!response.isOK() && this._element) {
-        this._element.$refs.message.setResponse(response);
+      if (!response.isOK() && this.element && this.element.$refs.message) {
+        this.element.$refs.message.setResponse(response);
       }
     }, 1000);
   }
@@ -37,6 +37,21 @@ class Manager {
       this.video(data),
       this.image(data),
     ]).then(() => {
+      this.update();
+    });
+  }
+
+  stop(type = null) {
+    const promises = [];
+  
+    for (const player in this._players) {
+      if (type === null || type === player) {
+        promises.push(this.clear(this._players[player]).then(() => {
+          this._players[player] = null;
+        }));
+      }
+    }
+    return Promise.all(promises).then(() => {
       this.update();
     });
   }

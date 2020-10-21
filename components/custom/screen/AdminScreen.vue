@@ -2,6 +2,11 @@
   .admin-screen
     .admin-screen--message(:class="messageClasses", @transitionend="messageClosed")
       | {{ message.text }}
+    .admin-screen--master
+      .admin-screen--button.admin-screen--intro(@click="intro()")
+        img.admin-screen--button-icon(src="/images/icons/intro.svg")
+      .admin-screen--button.admin-screen--stop(@click="stop()")
+        img.admin-screen--button-icon(src="/images/icons/stop.svg")
     .admin-screen--wrapper
       .admin-screen--item(v-for="item in items", :key="item.id", @click="click(item)")
         .admin-screen--name
@@ -69,6 +74,19 @@ export default {
       }
       return states;
     },
+    async intro() {
+      console.log('intro');
+      const response = await Client.screen('intro');
+      if (this.checkResponse(response, 'intro')) {
+        this.setMessage('info', 'Sended intro!');
+      }
+    },
+    async stop(type = null) {
+      const response = await Client.screen('stop', { type });
+      if (this.checkResponse(response, 'stop')) {
+        this.setMessage('info', 'Sended stop!');
+      }
+    },
     async click(item) {
       const response = await Client.screen('start', {item});
       if (this.checkResponse(response, item.name)) {
@@ -82,6 +100,7 @@ export default {
         } else {
           description = 'Error: ';
         }
+        console.log(response);
         if (response.data.error) {
           this.setMessage('error', description + response.data.error);
         } else {
@@ -111,11 +130,30 @@ export default {
   height: 100vh
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/bg/blacklight.jpg')
   background-size: cover
+  display: flex
+  flex-direction: column
+
+  &--master
+    display: flex
+    color: white
 
   &--wrapper
     display: flex
     flex-wrap: wrap
     overflow-y: auto
+    height: 100%
+
+  &--button
+    width: 100%
+    height: 4vh
+    text-align: center
+    padding: 10px 0
+    box-sizing: content-box
+    border: 1px solid black
+    min-height: 60px
+
+  &--button-icon
+    width: auto
     height: 100%
 
   &--item
@@ -124,6 +162,7 @@ export default {
     align-items: center
     font-size: 30px
     border: 1px solid black
+    min-height: 80px
 
   &--name
     width: 100%

@@ -8,6 +8,8 @@
       .game-screen--images
         .game-screen--image.game-screen--showable(v-for="image in images", :key="image.src", :class="{'game-screen--show': image.show}", :style="{'background-image': 'url(' + image.src + ')'}", @transitionend="removeImage()")
       .game-screen--blend.game-screen--showable(:class="{'game-screen--show': blend}", @transitionend="onFinish('blend')")
+    .game-screen--loader-frame(:class="{'game-screen--loader-frame--active': loading}")
+      Loader.game-screen--loader(ref="loader", size="2vw")
     .game-screen--message
       Message.game-screen--message-size(ref="message")
 </template>
@@ -17,17 +19,20 @@ import Client from '~/plugins/custom/screen';
 import Manager from '~/plugins/custom/screen/Manager';
 import AsyncHander from '~/plugins/core/event/AsyncHandler';
 import Message from '~/components/core/state/Message';
+import Loader from '~/components/core/media/Loader';
 
 const handler = new AsyncHander();
 
 export default {
   components: {
-    Message
+    Message,
+    Loader
   },
   data() {
     return {
       blend: true,
       imagedata: [],
+      loading: false,
     };
   },
   computed: {
@@ -70,6 +75,14 @@ export default {
     onFinish(name) {
       handler.resolve(name, this);
     },
+    openLoading(type, more) {
+      this.loading = true;
+      this.$refs.loader.open(type, more);
+    },
+    clearLoading() {
+      this.loading = false;
+      this.$refs.loader.close();
+    }
   },
   mounted() {
     Manager.mount(this);
@@ -126,5 +139,19 @@ export default {
   &--message-size
     min-width: 30vw
     min-height: 30vh
+
+  &--loader-frame
+    position: absolute
+    top: 10vh
+    right: calc(-45px - 2vw)
+    padding: 20px
+    border: 2px solid white
+    border-right-width: 0
+    background: #01c5c4
+    font-size: 0
+    transition: right .5s ease-in-out
+
+    &--active
+      right: 0
 
 </style>

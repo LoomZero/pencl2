@@ -1,6 +1,5 @@
 import Media from './Media';
 import YT from 'yt-player';
-import Client from './index';
 
 export default class YTMedia extends Media {
 
@@ -46,7 +45,7 @@ export default class YTMedia extends Media {
     if (this.player) this.player.destroy();
     this.player = new YT(this._target, this._options);
     this.player.load(options, this.auotplay);
-    this.player.on('unstarted', this.onReady.bind(this));
+    this.player.on('buffering', this.onReady.bind(this));
     this.player.on('playing', this.onPlay.bind(this));
     this.player.on('ended', this.onEnded.bind(this));
 
@@ -57,14 +56,15 @@ export default class YTMedia extends Media {
     }
   }
 
-  /**
-   * @abstract
-   */
-  onReady() { }
+  onReady() {
+    this.manager.element.openLoading(this.wrapper, 'yt');
+  }
 
   /**
    * @abstract
    */
-  onPlay() { }
+  onPlay() { 
+    this.manager.element.clearLoading();
+  }
 
 }
