@@ -1,5 +1,5 @@
 <template lang="pug">
-  .game-screen
+  .game-screen(:class="{'game-screen--blend': blend, 'game-screen--no-blend': !blend}")
     .game-screen--audio
       .game-screen--music(ref="music")
       .game-screen--sound(ref="sound")
@@ -132,13 +132,33 @@ export default {
 
   &--message
     position: absolute
+    top: 0
+    left: 0
+    transform: none
+    transition: all .3s ease-in-out
+
+  &--blend &--message
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
 
-  &--message-size
+  &--blend &--message-size
     min-width: 30vw
     min-height: 30vh
+
+  &--no-blend &--message-size
+    padding: 5px
+    background: transparent
+    text-shadow: 1px 1px black
+
+  &--no-blend &--message-size.message--error:before
+    content: ''
+    background: #f25c54
+    width: 3px
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
 
   &--loader-frame
     position: absolute

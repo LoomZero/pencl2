@@ -75,7 +75,6 @@ export default {
       return states;
     },
     async intro() {
-      console.log('intro');
       const response = await Client.screen('intro');
       if (this.checkResponse(response, 'intro')) {
         this.setMessage('info', 'Sended intro!');
@@ -100,7 +99,6 @@ export default {
         } else {
           description = 'Error: ';
         }
-        console.log(response);
         if (response.data.error) {
           this.setMessage('error', description + response.data.error);
         } else {
@@ -182,6 +180,7 @@ export default {
 
   &--state-icon
     width: 80%
+    filter: drop-shadow(0 0 1px white)
 
   &--state-active
     background: rgba(255, 255, 255, .4)

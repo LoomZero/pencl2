@@ -38,6 +38,118 @@
       }
     ]
   },
+  "F: #01 - Celtic Elf Music - Nighthawk Forest": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=8pJV2hiI6r0"
+      }
+    ]
+  },
+  "F: #02 - The Secret World - 11 - Foul Moon": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=7CJVL1J1eA8"
+      }
+    ]
+  },
+  "F: #03 - The Secret World - 25 - Danger Nearby": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=Yo13mILEKpc"
+      }
+    ]
+  },
+  "F: #04 - The Secret World - 45 - Eerie Surroundings": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=qQ_IzftvtwQ"
+      }
+    ]
+  },
+  "F: #05 - The Secret World - 28 - Alone in the Dark": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=YuiyDpsfulo"
+      }
+    ]
+  },
+  "F: #06 - Silent Hill OST - Until Death": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=4OkmMqkeJ6U",
+        "volume": 80
+      }
+    ]
+  },
+  "F: #07 - Silent Hill OST - Ain't Gonna Rain": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=82AxwPFHGt4",
+        "volume": 80
+      }
+    ]
+  },
+  "F: #08 - Silent Hill OST - Die": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=vpExfM_pVjM",
+        "volume": 80
+      }
+    ]
+  },
+  "F: #09 - Kevin MacLeod ~ Who Likes to Party": {
+    "defaults": {
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=49AiqH-DuR0",
+        "volume": 80
+      }
+    ]
+  },
+  "Waldschrat": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true,
+      "time": 1000
+    },
+    "images": [
+      {
+        "src": "https://staticdelivery.nexusmods.com/images/952/32656605-1560616570.png"
+      },
+      {
+        "src": "https://static.wikia.nocookie.net/witcher_gamepedia/images/4/42/The_Witcher_3_E3_2013_02.jpg/revision/latest"
+      },
+      {
+        "src": "https://static.wikia.nocookie.net/witcher_gamepedia/images/c/c4/Tw3_wallpaper_2.jpg/revision/latest"
+      }
+    ]
+  },
   "Reise Background": {
     "defaults": {
       "shuffle": true,

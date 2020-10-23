@@ -1,8 +1,13 @@
 import OS from 'os';
 
-const WS_URL = process.env.WS_URL || 'http://' + OS.hostname() + ':3000';
+const WS_URL = process.env.WS_URL || 'http://192.168.0.50:3000';
 
 export default {
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
+
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
