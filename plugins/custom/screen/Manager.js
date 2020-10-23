@@ -31,14 +31,24 @@ class Manager {
   }
 
   execute(data) {
-    Promise.all([
-      this.sound(data),
-      this.music(data),
-      this.video(data),
-      this.image(data),
-    ]).then(() => {
-      this.update();
+    this.onStop(data).then(() => {
+      Promise.all([
+        this.sound(data),
+        this.music(data),
+        this.video(data),
+        this.image(data),
+      ]).then(() => {
+        this.update();
+      });
     });
+  }
+
+  onStop(data) {
+    if (data.defaults && data.defaults.stop) {
+      return this.stop();
+    } else {
+      return Promise.resolve();
+    }
   }
 
   stop(type = null) {

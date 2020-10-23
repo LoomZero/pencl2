@@ -1,199 +1,442 @@
 {
-  "Image": {
-    "images": [
-      {
-        "src": "https://photojournal.jpl.nasa.gov/jpeg/PIA23689.jpg"
-      }
-    ]
-  },
-  "Images": {
-    "defaults": {
-      "time": 5000,
-      "loop": true,
-      "shuffle": true
-    },
-    "images": [
-      {
-        "src": "https://photojournal.jpl.nasa.gov/jpeg/PIA23689.jpg",
-        "time": 10000
-      },
-      {
-        "src": "https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg"
-      },
-      {
-        "src": "https://media.osram.info/media/img/osram-dam-15418849/c,x,960,y,640,w,3400,h,1850/s,x,1920,y,0/GettyImages-998946914.jpg"
-      }
-    ]
-  },
-  "Music": {
-    "musics": [
-      {
-        "src": "https://www.youtube.com/watch?v=pIF_9E--GZA",
-        "start": 100, 
-        "end": 200
-      }
-    ]
-  },
-  "Musics No": {
-    "defaults": {
-      "volume": 10
-    },
-    "musics": [
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 100, 
-        "end": 102
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 120, 
-        "end": 123,
-        "volume": 50
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 140, 
-        "end": 142
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 15, 
-        "end": 17
-      }
-    ]
-  },
-  "Musics Shuffle": {
-    "defaults": {
-      "shuffle": true
-    },
-    "musics": [
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 100, 
-        "end": 102
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 120, 
-        "end": 123,
-        "volume": 50
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 140, 
-        "end": 142
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 15, 
-        "end": 17
-      }
-    ]
-  },
-  "Musics Loop Shuffle": {
+  "Idle - Pause": {
     "defaults": {
       "loop": true,
+      "stop": true,
       "shuffle": true
     },
-    "musics": [
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 100, 
-        "end": 102
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 120, 
-        "end": 123,
-        "volume": 50
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 140, 
-        "end": 142
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 15, 
-        "end": 17
-      }
-    ]
-  },
-  "Musics Loop": {
-    "defaults": {
-      "loop": true
-    },
-    "musics": [
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 100, 
-        "end": 102
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 120, 
-        "end": 123,
-        "volume": 50
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 140, 
-        "end": 142
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=viM0-3PXef0",
-        "start": 15, 
-        "end": 17
-      }
-    ]
-  },
-  "Sound": {
-    "sounds": [
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 100, 
-        "end": 103
-      }
-    ]
-  },
-  "Sounds": {
-    "sounds": [
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 100, 
-        "end": 103
-      },
-      {
-        "src": "https://www.youtube.com/watch?v=9qIeVgWLQrQ",
-        "start": 10, 
-        "end": 12
-      }
-    ]
-  },
-  "Video": {
     "videos": [
       {
-        "src": "https://www.youtube.com/watch?v=kNiOnMMxak0"
-      }
-    ]
-  },
-  "Long Music": {
-    "musics": [
+        "src": "https://www.youtube.com/watch?v=p5kCzXN5SVw",
+        "volume": 0
+      },
       {
-        "src": "https://www.youtube.com/watch?v=kNiOnMMxak0"
-      }
-    ]
-  },
-  "Video + Music": {
-    "musics": [
+        "src": "https://www.youtube.com/watch?v=__R1baiV4B0",
+        "volume": 0
+      },
       {
-        "src": "https://www.youtube.com/watch?v=dDVCqx28Kss"
+        "src": "https://www.youtube.com/watch?v=IsJGLslPQq8",
+        "volume": 0
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=yTu1XOrFgv0",
+        "volume": 0
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=M7dToSMWSxQ",
+        "volume": 0
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=RWOBG_XB67s",
+        "volume": 0
       }
     ],
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=NknjE2SBPxw",
+        "volume": 20
+      }
+    ]
+  },
+  "Reise Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
     "videos": [
       {
         "src": "https://www.youtube.com/watch?v=kNiOnMMxak0",
         "volume": 0
+      }
+    ]
+  },
+  "Reise Brücke Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=jPGclR-URmQ"
+      }
+    ]
+  },
+  "Reise Fluss Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=t0cJHAWEgbg"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=B-0l4l_11UA",
+        "volume": 0
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=hfY-8rmiRyM",
+        "volume": 0
+      }
+    ]
+  },
+  "Reise Wald Tümpel Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=KpBL9_zsfYg"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=lk15TXBy94o"
+      }
+    ]
+  },
+  "Reise Wald Berg Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=qKGBTvgXacE"
+      }
+    ]
+  },
+  "Stadt Platz Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=eiqInq8rt-w"
+      }
+    ]
+  },
+  "Dorf Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=u8SW2P1916s"
+      }
+    ]
+  },
+  "Dorf Fest Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=SAMi7HBqqKk",
+        "volume": 0
+      }
+    ],
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=SAMi7HBqqKk"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=MEfOPFvuh8Y"
+      }
+    ]
+  },
+  "Novigrad Background": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=Da9S9yjZZP4",
+        "volume": 0
+      }
+    ],
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=Da9S9yjZZP4"
+      }
+    ]
+  },
+  "Oxenfurt": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=C10FmLLNH1g"
+      }
+    ]
+  },
+  "Dorf Music": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=0HNCSSBWtMY"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=H3ThYAbT7as"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=fiBUTIcXn9s"
+      }
+    ]
+  },
+  "Reise Friedlich": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=s-xmSnT2hn8"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=Ufl3wcy2qoc"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=9zAP2WPWI3U"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=ZEvrIEQaFvc"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=bF2mDCVibxA"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=RdsPCy9RGcw"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=zeSTNq-pO_0"
+      }
+    ]
+  },
+  "Jagd - Flucht": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=S_aUv_IZtkQ"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=QmJ4vugrf-M"
+      }
+    ]
+  },
+  "Kampf Davor": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=XLOW29wWHO4"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=F1DM0qJ_JOg"
+      }
+    ]
+  },
+  "Kampf Mensch": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=PenWFRHOzSk"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=hPMGRFZALBM"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=EB4lNap-j_A"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=z65cm3zSSjI"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=1ZXvK7J_F1A"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=VxTIWhFn7To"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=L74pTmqgQ9o"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=IFJsAZfU17s"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=TGvJa8xiRos"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=28IdxnQKMX0"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=l8mIQ_xMusk"
+      }
+    ]
+  },
+  "Kampf Monster": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=iX1ZXEWvMsU"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=L74pTmqgQ9o"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=qYJ8o7Rk4Uw"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=L865glt5zoU"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=MmWP0iuxSMk"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=IFJsAZfU17s"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=fGTZJrI87NQ"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=oP3ftHHn8lk"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=0UfiOj-sAL8"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=3r5cYrwVHy8"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=D-NRqFkErjQ"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=l8mIQ_xMusk"
+      }
+    ]
+  },
+  "Harter Kampf": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=6rYZSYVXPQ8"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=IFJsAZfU17s"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=fGTZJrI87NQ"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=6XQ23_QUwN0"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=gg8KPwkwKFw"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=oP3ftHHn8lk"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=SN1Ykt2Qi4s"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=Aa1GCoDbmwM"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=l8mIQ_xMusk"
+      }
+    ]
+  },
+  "Spielkarten Taverne": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=kT2gZ5nphi4"
+      }
+    ]
+  },
+  "Überfall": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=d-IhBEVvR6g"
+      }
+    ]
+  },
+  "Final Kampf": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=FrSDMSTRz7o"
+      }
+    ]
+  },
+  "Erfolgreicher Kampf": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=8sk4h4RPTxE"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=7B1mZKTByio"
+      }
+    ]
+  },
+  "Misslungender Kampf - Flucht": {
+    "defaults": {
+      "shuffle": true,
+      "loop": true
+    },
+    "musics": [
+      {
+        "src": "https://www.youtube.com/watch?v=V01HRVMOHTc"
+      },
+      {
+        "src": "https://www.youtube.com/watch?v=y3ls83Cqx9s"
+      }
+    ]
+  },
+  "Outro": {
+    "defaults": {
+      "stop": true
+    },
+    "videos": [
+      {
+        "src": "https://www.youtube.com/watch?v=waMkFIzvDpE"
       }
     ]
   }
