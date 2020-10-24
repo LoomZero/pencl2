@@ -1,5 +1,5 @@
 <template lang="pug">
-  .logo-screen(:class="classes", @click="outro = !outro")
+  .logo-screen(:class="classes")
     SVGEmbed(src="/effects/wavy.svg", style="display: none;")
     .logo-screen--layer.logo-screen--layer-witcher
       .logo-screen--center
