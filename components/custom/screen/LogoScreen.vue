@@ -1,5 +1,5 @@
 <template lang="pug">
-  .logo-screen(:class="classes")
+  .logo-screen(:class="classes", @click="outro = !outro")
     SVGEmbed(src="/effects/wavy.svg", style="display: none;")
     .logo-screen--layer.logo-screen--layer-witcher
       .logo-screen--center
@@ -14,6 +14,14 @@
     .logo-screen--layer
       .logo-screen--center
         SlideMonster.logo-screen--monster(ref="monster")
+    .logo-screen--layer.logo-screen--layer-outro
+      .logo-screen--center
+        img.logo-screen--outro-image(src="/images/witcher/witcher_1.png")
+        img.logo-screen--outro-image(src="/images/witcher/witcher_2.png")
+        img.logo-screen--outro-image(src="/images/witcher/witcher_3.png")
+    .logo-screen--layer.logo-screen--layer-outro
+      .logo-screen--center
+        img.logo-screen--outro-leshy(src="https://images.wikia.com/witcher_gamepedia/images/8/8b/Tw3_journal_kernun_locked.png")
     
 </template>
 
@@ -45,6 +53,9 @@ function play() {
     setTimeout(() => {
       item.$refs.monster.start();
     }, 10000);
+    setTimeout(() => {
+      item.outro = true;
+    }, 50000);
   } else {
     state = true;
   }
@@ -59,12 +70,14 @@ export default {
   data() {
     return {
       animate: false,
+      outro: false,
     }
   },
   computed: {
     classes() {
       return {
         'logo-screen---animate': this.animate,
+        'logo-screen---outro': this.outro,
       };
     }
   },
@@ -95,6 +108,14 @@ export default {
     left: 0
     right: 0
     bottom: 0
+    opacity: 1
+    transition: opacity .2s ease-in-out
+
+  &---outro &--layer
+    opacity: 0
+
+  &---outro &--layer-outro
+    opacity: 1
 
   &--center
     display: flex
@@ -125,7 +146,7 @@ export default {
     opacity: 0
     filter: blur(30px) url('#wavy')
     transform: scale(1.1)
-    transition: filter 2s 10s, opacity .8s 10s, transform 2s 10s
+    transition: filter 2s 9.3s, opacity .8s 9.3s, transform 2s 9.3s
 
   &---animate &--witcher-image
     filter: blur(2px) url('#wavy') drop-shadow(0 0 50px rgba(255, 255, 255, .2))
@@ -146,7 +167,7 @@ export default {
     font-size: 10vw
     text-shadow: 5px 5px 5px black
     opacity: 0
-    transition: opacity 1s 10s
+    transition: opacity 1s 8s
 
   &---animate &--witcher-text
     opacity: 1
@@ -169,4 +190,33 @@ export default {
   &---animate &--logo
     animation: logo--flip 5s forwards cubic-bezier(.22,1,.51,.99)
  
+  &--outro-image
+    width: 25vw
+    filter: brightness(0) drop-shadow(0 0 5px black) drop-shadow(0 0 5px black) drop-shadow(0 0 5px black) drop-shadow(0 0 5px black) drop-shadow(0 0 50px rgba(255, 255, 255, .2))
+    transform: scale(1.5)
+    opacity: 0
+
+    &:nth-child(1),
+    &:nth-child(3)
+      transition: all 3s 2s ease-in-out  
+
+    &:nth-child(2)
+      width: 33vw
+      transition: all 3s 2.8s ease-in-out
+
+  &---outro &--outro-image
+    transform: scale(1)
+    opacity: 1
+
+  &--outro-leshy
+    width: 50vw
+    filter: blur(5px) drop-shadow(0 0 5px rgba(255, 255, 255, .2))
+    transform: scale(1.5)
+    opacity: 0
+    transition: all 4s 6s ease-in-out
+
+  &---outro &--outro-leshy
+    transform: scale(1)
+    opacity: 1
+
 </style>
