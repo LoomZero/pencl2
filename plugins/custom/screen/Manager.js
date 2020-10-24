@@ -43,6 +43,12 @@ class Manager {
     });
   }
 
+  next(type = 'music') {
+    if (this._players[type] && typeof this._players[type].next === 'function') {
+      this._players[type].next();
+    }
+  }
+
   onStop(data) {
     if (data.defaults && data.defaults.stop) {
       return this.stop();

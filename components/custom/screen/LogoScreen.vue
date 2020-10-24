@@ -27,7 +27,7 @@ let item = null;
 let state = false;
 
 const Intro = new Howl({
-  src: "/music/intro_lang.mp3",
+  src: "/music/intro_final.mp3",
   onload: () => {
     play();
   },

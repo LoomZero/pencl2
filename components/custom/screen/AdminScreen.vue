@@ -7,6 +7,8 @@
         img.admin-screen--button-icon(src="/images/icons/intro.svg")
       .admin-screen--button.admin-screen--stop(@click="stop()")
         img.admin-screen--button-icon(src="/images/icons/stop.svg")
+      .admin-screen--button.admin-screen--forward(@click="forward()")
+        img.admin-screen--button-icon(src="/images/icons/forward.svg")
     .admin-screen--wrapper
       .admin-screen--item(v-for="item in items", :key="item.id", @click="click(item)")
         .admin-screen--name
@@ -84,6 +86,12 @@ export default {
       const response = await Client.screen('stop', { type });
       if (this.checkResponse(response, 'stop')) {
         this.setMessage('info', 'Sended stop!');
+      }
+    },
+    async forward() {
+      const response = await Client.screen('forward');
+      if (this.checkResponse(response, 'forward')) {
+        this.setMessage('info', 'Sended forward!');
       }
     },
     async click(item) {

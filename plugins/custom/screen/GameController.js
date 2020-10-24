@@ -8,6 +8,7 @@ export default class GameController extends Controller {
     this.addHandle('getState');
     this.addHandle('stop');
     this.addHandle('intro');
+    this.addHandle('forward');
   }
 
   /**
@@ -35,7 +36,6 @@ export default class GameController extends Controller {
    * @param {import('sockettools/src/Request')} request 
    */
   intro(request) {
-    console.log(Manager.element.$nuxt.$route.path);
     if (Manager.element.$nuxt.$route.path === '/') {
       Manager.element.$refs.logo.start();
     } else {
@@ -43,6 +43,13 @@ export default class GameController extends Controller {
         path: '/',
       });
     }
+  }
+
+  /**
+   * @param {import('sockettools/src/Request')} request 
+   */
+  forward(request) {
+    Manager.next(request.params.type || 'music');
   }
 
 }
